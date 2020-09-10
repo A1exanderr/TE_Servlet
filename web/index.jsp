@@ -33,5 +33,7 @@
             }
         %>
         <a href="HolaMundo">Mostrar un servlet</a>
+        <a href="InfoRequest">InfoRequest</a>
+        <a href="InfoCabeceras">InfoCabeceras</a>
     </body>
 </html>

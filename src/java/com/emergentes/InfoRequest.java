@@ -8,19 +8,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "HolaMundo", urlPatterns = {"/HolaMundo"})
-public class HolaMundo extends HttpServlet {
+/**
+ *
+ * @author jin
+ */
+@WebServlet(name = "InfoRequest", urlPatterns = {"/InfoRequest"})
+public class InfoRequest extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HolaMundo</title>");            
+            out.println("<title>Servlet InfoRequest</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HolaMundo at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet InfoRequest at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -39,18 +54,21 @@ public class HolaMundo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        // processRequest(request, response);
-        //System.out.println("Estas dentro del metodo Get");
-        
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<title>Bienvenido</title>");
-        out.println("</body>");
-        out.println("<h1>Hola mundo</h1>");
-        out.println("</html>");
+       response.setContentType("text/html;charset=UTF-8");
+       PrintWriter out = response.getWriter();
+       out.println("<htlm>");
+       out.println("<head>");
+       out.println("<title>Informacion del onjeto request</title>");
+       out.println("</head>");
+       out.println("<body>");
+       out.println("<h3>Request</h3>");
+       out.println("Metodo: "+ request.getMethod() + "<br>");
+       out.println("Direccion: " + request.getRequestURI()+"<br>");
+       out.println("Protocolo: " + request.getProtocol() + "<br>");
+       out.println("Ruta cotexto: "+ request.getContextPath()+"<br>");
+       out.println("Servidor: "+ request.getServerName()+ "<br>");
+       out.println("</body>");
+       out.println("</html>");
     }
 
     /**
