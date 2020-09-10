@@ -12,28 +12,13 @@
         <title>Bien benido</title>
     </head>
     <body>
-        <h1>Hola mundo</h1>
-        
-        <%
-            String nombre = "Alex Mamani";
-            int edad = 12;
-        %>
-        <p>Este es u ejemplo de jpg</p>
-        <p>Veamoa a mostrar el valor que tiene nombre</p>
-        <%= nombre %>
-        <p>Veamos si puedes ingresar a la pagina</p>
-        <%
-            if (edad > 18)
-            {
-                out.println("Estas autorizado para ingresar");
-            }
-            else
-            {
-                out.println("Todavia eres muy chico");
-            }
-        %>
-        <a href="HolaMundo">Mostrar un servlet</a>
-        <a href="InfoRequest">InfoRequest</a>
-        <a href="InfoCabeceras">InfoCabeceras</a>
+        <h1>Servlets</h1>
+    <li><a href="HolaMundo">Hola Mundo</a></li>
+        <li><a href="InfoRequest">Objeto requests</a></li>
+        <li><a href="InfoCabeceras">Cabeceras</a></li>
+        <li><a href="LeeParametros">Lee Parametros Post</a></li>
+        <li><a href="LeeParametrosGet">Lee Parametros Get</a></li>
+        <li><a href="UsoCookies">Crrear y mostrar Cookies</a></li>
+        <li><a href="UsoSession">Uso de sesiones</a></li>
     </body>
 </html>
